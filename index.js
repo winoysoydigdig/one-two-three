@@ -7,7 +7,7 @@ const PREFIX = '#';
 
 bot.on('ready', () => {
     console.log('This bot is online');
-    bot.user.setActivity('End game', { type: 'WATCHING'}).catch(console.error);
+    bot.user.setActivity('winoysoydigdig', { type: 'WATCHING'}).catch(console.error);
 })
 
 bot.on('message', message=>{
