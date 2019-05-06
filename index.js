@@ -122,4 +122,28 @@ bot.on("message", async message => {
 
 });
 
+//!welcome message 
+bot.on('guildMemberAdd', member => {
+  let channel = member.guild.channels.find('name', '👥สมาชิกใหม่');
+  let memberavatar = member.user.avatarURL
+      if (!channel) return;
+      let embed = new Discord.RichEmbed()
+      .setColor('RANDOM')
+      .setThumbnail(memberavatar)
+      .addField(':microphone2: | Welcome!', `ยินดีต้อนรับ, ${member}`)
+      .addField(':family_mwgb: | Your are the member', `${member.guild.memberCount}`)
+      .addField("Name", `<@` + `${member.id}` + `>`, true)
+      .addField('Server', `${member.guild.name}`, true )
+      .setFooter(`**${member.guild.name}**`)
+      .setTimestamp()
+
+      channel.sendEmbed(embed);
+});
+
+bot.on('guildMemberAdd', member => {
+
+  console.log(`${member}`, "has joined" + `${member.guild.name}`)
+
+});
+
 bot.login(tokenfile.token);
