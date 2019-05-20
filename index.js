@@ -145,5 +145,12 @@ bot.on('guildMemberAdd', member => {
   console.log(`${member}`, "has joined" + `${member.guild.name}`)
 
 });
+client.on('message', message => {
+    const swearWords = ["heck", "gga","darn"];
+    if( swearWords.some(word => message.content.includes(word)) ) {
+        message.delete();
+        message.author.send('Hey! That word has been banned, please don\'t use it!');
+      }
+})
 
 bot.login(tokenfile.token);
