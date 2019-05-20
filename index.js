@@ -146,10 +146,10 @@ bot.on('guildMemberAdd', member => {
 
 });
 bot.on('message', message => {
-    const swearWords = ["heck", "gga","darn"];
+    const swearWords = ["heck", "!p","darn"];
     if( swearWords.some(word => message.content.includes(word)) ) {
         message.delete();
-        message.author.send('Hey! That word has been banned, please don\'t use it!');
+        message.author.send('ขอโทษด้วย ข้อความนี้ต้องพิมในแชทคำสั่ง');
       }
 })
 
