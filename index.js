@@ -145,12 +145,5 @@ bot.on('guildMemberAdd', member => {
   console.log(`${member}`, "has joined" + `${member.guild.name}`)
 
 });
-bot.on('message', message => {
-    const swearWords = ["heck", "!p","darn"];
-    if( swearWords.some(word => message.content.includes(word)) ) {
-        message.delete();
-        message.author.send('ขอโทษด้วย ข้อความนี้ต้องพิมในแชทคำสั่ง');
-      }
-})
 
 bot.login(tokenfile.token);
