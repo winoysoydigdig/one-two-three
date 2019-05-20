@@ -145,7 +145,7 @@ bot.on('guildMemberAdd', member => {
   console.log(`${member}`, "has joined" + `${member.guild.name}`)
 
 });
-client.on('message', message => {
+bot.on('message', message => {
     const swearWords = ["heck", "gga","darn"];
     if( swearWords.some(word => message.content.includes(word)) ) {
         message.delete();
