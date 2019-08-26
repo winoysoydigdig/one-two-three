@@ -170,7 +170,7 @@ bot.on('message', message => {
     const swearWords = ["ไอวิน", "ไอวินควย","fuck you win"];
     if( swearWords.some(word => message.content.includes(word)) ) {
         message.delete();
-        message.author.send('ฮั่นแน่!! เราไม่ควรด่าแอดมินนะครับบบ');
+        message.author.send('ฮั่นแน่!! เราไม่ควรด่าแอดมินนะครับบบผมมม');
       }
 })
 
